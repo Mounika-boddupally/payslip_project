@@ -26,56 +26,57 @@ body{
 
 /* Header */
 
-.header{
-    background:#16395f;
-    color:white;
-    padding:8px 12px;
-    border-radius:6px;
+.top-header{
+
+    width:100%;
+    background:#07122b;
+    padding:18px 20px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.2);
+
+}
+
+.header-content{
+
     display:flex;
     align-items:center;
     justify-content:center;
-    position:relative;
-    height:75px;
+    gap:18px;
+
 }
 
-.logo{
-    width:60px;
-    height:60px;
+.company-logo
+{
+
+    width:70px;
+    height:70px;
     object-fit:contain;
-    position:absolute;
-    left:15px;
-    top:50%;
-    transform:translateY(-50%);
-}
-.center-title{
-    text-align:center;
-    width:100%;
-    padding-left:60px;
+    background:white;
+    padding:5px;
+    border-radius:10px;
 }
 
-.company-name{
-    font-size:22px;
-    font-weight:bold;
-}
+/* Titles */
 
-.payslip-title{
-    font-size:13px;
-    font-weight:bold;
-    margin-top:2px;
-}
+.title-section h1{
 
-/* Section */
-
-.section-title{
-    background:#16395f;
     color:white;
-    padding:3px 6px;
-    border-radius:4px;
-    margin-top:6px;
-    margin-bottom:4px;
-    font-size:12px;
-    font-weight:bold;
+    font-size:38px;
+    font-weight:700;
+    margin:0;
+    letter-spacing:1px;
+
 }
+
+.title-section p{
+
+    color:#9aa7c7;
+    margin-top:4px;
+    font-size:16px;
+    font-weight:600;
+    letter-spacing:1px;
+
+}
+
 
 /* Labels */
 
@@ -133,24 +134,71 @@ label{
 
 /* Buttons */
 
-.btn{
-    padding:3px 10px;
-    font-size:12px;
+.header-buttons{
+
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-top:20px;
+    flex-wrap:wrap;
+
+}
+
+.nav-btn{
+
+    background:transparent;
+    color:white;
+    border:1px solid #3d4d7a;
+    padding:10px 22px;
+    border-radius:10px;
+    font-size:15px;
+    font-weight:600;
+    transition:0.3s;
+
+}
+
+.nav-btn:hover{
+
+    background:white;
+    color:#07122b;
+
 }
 /* Responsive */
 
 @media(max-width:992px){
 
-.container{
-    width:95%;
+@media(max-width:768px){
+
+.header-content{
+
+    flex-direction:column;
+    text-align:center;
+
 }
 
-.company-name{
-    font-size:22px;
+.title-section h1{
+
+    font-size:24px;
+
 }
 
-.payslip-title{
-    font-size:15px;
+.title-section p{
+
+    font-size:13px;
+
 }
 
+.company-logo{
+
+    width:60px;
+    height:60px;
+
+}
+
+.nav-btn{
+
+    width:100%;
+
+}
+}
 }

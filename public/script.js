@@ -366,17 +366,24 @@ function updateMonthTitle(){
 
     if(payFrom){
 
-        let date = new Date(payFrom);
+        let parts = payFrom.split(".");
+
+        let date = new Date(
+            parts[2],
+            parts[1]-1,
+            parts[0]
+        );
 
         let month =
         date.toLocaleString('default',{
             month:'long'
         }).toUpperCase();
 
-        let year = date.getFullYear();
+        let year =
+        date.getFullYear();
 
         document.getElementById('monthTitle').innerText =
-        `Payslip For The Month Of ${month} ${year}`;
+        `EMPLOYEE PAYSLIP FOR THE MONTH OF ${month} ${year}`;
 
     }
 
